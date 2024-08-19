@@ -18,6 +18,7 @@ RUN apt-get update && \
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+COPY ./php.ini "$PHP_INI_DIR/conf.d/custom.ini"
 COPY ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./start-container /usr/local/bin/start-container
 RUN chmod +x /usr/local/bin/start-container

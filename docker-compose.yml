@@ -17,7 +17,8 @@ services:
       story:
     volumes:
       - ./site.conf:/etc/nginx/sites-enabled/default
-
 networks:
   story:
     driver: bridge
+  proxy_default:
+    external: true
