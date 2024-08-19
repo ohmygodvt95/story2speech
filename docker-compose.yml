@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        WWWGROUP: '${WWWGROUP:-1000}'
+        WWWUSER: '${WWWUSER:-1000}'
+    restart: always
+    environment:
+      TZ: '${APP_TIMEZONE:-Asia/Ho_Chi_Minh}'
+    networks:
+      proxy_default:
+        ipv4_address: '${APP_IPV4_ADDRESS:-172.26.0.2}'
+      story:
+    volumes:
+      - ./site.conf:/etc/nginx/sites-enabled/default
+
+networks:
+  story:
+    driver: bridge
