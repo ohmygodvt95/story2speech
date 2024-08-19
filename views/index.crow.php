@@ -18,7 +18,7 @@
 <div class="d-flex mt-5 gap-3 text-light">
     <div class="flex-grow-1 mr-4">
         <p class="lead">URL</p>
-        <input type="text" class="form-control" placeholder="URL here" id="url" value="https://truyenfull.vn/truyen-dau-pha-thuong-khung/chuong-1/" />
+        <input type="text" class="form-control" placeholder="URL here" id="url" value="https://truyenfull.io/thieu-nien-ca-hanh/chuong-290/" />
     </div>
     <div class="w-25">
         <p class="lead">Selector</p>
